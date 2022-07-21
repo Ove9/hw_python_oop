@@ -1,6 +1,3 @@
-from os import lseek
-
-
 class InfoMessage:
     """Информационное сообщение о тренировке."""
 
