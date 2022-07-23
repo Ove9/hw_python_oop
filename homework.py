@@ -14,7 +14,7 @@ class InfoMessage:
         self.calories = calories
 
     def get_message(self) -> str:
-        message = (f'Тип тренировки: {self.training_type}; '
+        message: str = (f'Тип тренировки: {self.training_type}; '
                    f'Длительность: {self.duration:.3f} ч.; '
                    f'Дистанция: {self.distance:.3f} км; '
                    f'Ср. скорость: {self.speed:.3f} км/ч; '
@@ -118,7 +118,7 @@ class Swimming(Training):
     def get_spent_calories(self) -> float:
         coeff_calorie_5: float = 1.1
         coeff_calorie_6: int = 2
-        calc_swim = ((Swimming.get_mean_speed(self) + coeff_calorie_5)
+        calc_swim = ((self().get_mean_speed() + coeff_calorie_5)
                      * coeff_calorie_6 * self.weight)
         return calc_swim
 
