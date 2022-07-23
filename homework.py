@@ -91,7 +91,7 @@ class SportsWalking(Training):
         coeff_calorie_4: float = 0.029
         M_IN_H: int = 60
         calc_walk = ((coeff_calorie_3 * self.weight
-                     + (super().get_mean_speed() * 2 / self.height)
+                     + (super().get_mean_speed() ** 2 // self.height)
                      * coeff_calorie_4 * self.weight)
                      * (self.duration * M_IN_H))
         return calc_walk
@@ -118,7 +118,7 @@ class Swimming(Training):
     def get_spent_calories(self) -> float:
         coeff_calorie_5: float = 1.1
         coeff_calorie_6: int = 2
-        calc_swim = (Swimming.get_mean_speed(self) + coeff_calorie_5
+        calc_swim = ((Swimming.get_mean_speed(self) + coeff_calorie_5)
                      * coeff_calorie_6 * self.weight)
         return calc_swim
 
