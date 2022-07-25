@@ -72,7 +72,7 @@ class Running(Training):
         M_IN_H: int = 60
         calc_run = ((coeff_calorie_1 * super().get_mean_speed()
                     - coeff_calorie_2) * self.weight
-                    / Training.M_IN_KM * self.duration * Running.M_IN_H)
+                    / Training.M_IN_KM * self.duration * M_IN_H)
         return calc_run
 
 
