@@ -111,6 +111,9 @@ class Swimming(Training):
 
     LEN_STEP: float = 1.38
 
+    def get_distance(self) -> float:
+        return self.action * Swimming.LEN_STEP / Training.M_IN_KM
+    
     def get_mean_speed(self):
         return ((self.length_pool * self.count_pool
                 / Training.M_IN_KM) / self.duration)
