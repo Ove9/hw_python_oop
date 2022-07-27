@@ -13,11 +13,11 @@ class InfoMessage:
         self.calories = calories
 
     def get_message(self) -> str:
-        return str (f'Тип тренировки: {self.training_type}; '
-                    f'Длительность: {self.duration:.3f} ч.; '
-                    f'Дистанция: {self.distance:.3f} км; '
-                    f'Ср. скорость: {self.speed:.3f} км/ч; '
-                    f'Потрачено ккал: {self.calories:.3f}.')
+        return str(f'Тип тренировки: {self.training_type}; '
+                   f'Длительность: {self.duration:.3f} ч.; '
+                   f'Дистанция: {self.distance:.3f} км; '
+                   f'Ср. скорость: {self.speed:.3f} км/ч; '
+                   f'Потрачено ккал: {self.calories:.3f}.')
 
 
 class Training:
@@ -76,6 +76,7 @@ class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
     coeff_calorie_3: float = 0.035
     coeff_calorie_4: float = 0.029
+    
     def __init__(self, action: int,
                  duration: float,
                  weight: float,
@@ -95,6 +96,7 @@ class Swimming(Training):
     coeff_calorie_5: float = 1.1
     coeff_calorie_6: int = 2
     LEN_STEP: float = 1.38
+    
     def __init__(self, action: int,
                  duration: float,
                  weight: float,
