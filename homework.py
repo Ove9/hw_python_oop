@@ -76,7 +76,7 @@ class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
     coeff_calorie_3: float = 0.035
     coeff_calorie_4: float = 0.029
-    
+
     def __init__(self, action: int,
                  duration: float,
                  weight: float,
@@ -96,7 +96,7 @@ class Swimming(Training):
     coeff_calorie_5: float = 1.1
     coeff_calorie_6: int = 2
     LEN_STEP: float = 1.38
-    
+
     def __init__(self, action: int,
                  duration: float,
                  weight: float,
